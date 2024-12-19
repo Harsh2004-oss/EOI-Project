@@ -2,7 +2,9 @@
 
 An e-commerce platform designed to provide users with seamless online shopping experiences. It features product listing, category filtering, a shopping cart, user authentication, order history, an admin panel for product management, and payment gateway integration.
 
----
+![Screenshot 2024-12-19 114208](https://github.com/user-attachments/assets/c21fd1ac-4cdc-499d-a2a1-8e608d5a6f91)
+![Screenshot 2024-12-19 114153](https://github.com/user-attachments/assets/a1d0caa4-746a-4119-8da9-79c464c5f377)
+![Screenshot 2024-12-19 114110](https://github.com/user-attachments/assets/a1bc4016-5fbf-4a14-897f-6abcbf78c1bf)
 
 ## Features
 
