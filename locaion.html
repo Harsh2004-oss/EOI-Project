@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Update</title>
+</head>
+<body>
+    <h2>Update Location</h2>
+
+    <!-- Dropdown for Static Location Options -->
+    <form action="submit_location.php" method="POST">
+        <label for="location">Select Your Location:</label>
+        <select name="location" id="location">
+            <option value="" disabled selected>-- Choose Location --</option>
+            <option value="new_york">New York</option>
+            <option value="los_angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="houston">Houston</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <!-- Button to Enable Geolocation -->
+        <button type="button" onclick="getLocation()">Enable My Location</button>
+        <p id="output"></p>
+
+        <br>
+        <input type="submit" value="Submit Location">
+    </form>
+
+    <!-- JavaScript for Geolocation -->
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("output").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("output").innerHTML = 
+                "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("output").innerHTML = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("output").innerHTML = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("output").innerHTML = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById("output").innerHTML = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

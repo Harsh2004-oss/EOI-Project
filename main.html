@@ -1,0 +1,271 @@
+<?php
+session_start();
+include("connect.php");
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TechCart</title>
+    <style>
+    /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 5px 20px;
+        }
+        
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        .top-bar .logo {
+            height: 40px;
+        }
+        .top-bar .location {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+        }
+        .top-bar .location a {
+            color: #f0c14b;
+            margin-left: 5px;
+            text-decoration: none;
+        }
+          
+        /* Menu Button Row */
+        .menu-row {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        /* Menu Button */
+        .menu-button {
+            font-size: 1em;
+            color: white;
+            margin-right: 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 90px;
+            left: 20px;
+            background-color: #232f3e;
+            border: 1px solid #444;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            z-index: 1000;
+        }
+        .dropdown-menu a {
+            display: block;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            font-size: 0.9em;
+            border-bottom: 1px solid #444;
+        }
+        .dropdown-menu a:hover {
+            background-color: #131a22;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: center;
+            background-color: #131a22;
+            padding: 5px 0;
+        }
+        
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            margin: 0 20px;
+        }
+        .search-bar select, .search-bar input[type="text"] {
+            padding: 18px;
+            border: 8px;
+            border-radius: 15px;
+        }
+        .search-bar select {
+            margin-right: 5px;
+            background-color: #f3f3f3;
+            border-radius: 15px;
+            padding: 8px;
+        }
+        .search-bar input[type="text"] {
+            flex: 1;
+            margin-right: 15px;
+            padding: 8px;
+            width: 400px;
+        }
+        .search-bar button {
+            background-color: #f0c14b;
+            padding: 8px 15px;
+            border: 1px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        /* Bottom Navigation */
+        .bottom-nav {
+            display: flex;
+            justify-content: center;
+            background-color: #131a22;
+            padding: 5px 0;
+        }
+        .bottom-nav a {
+            color: white;
+            margin: 0 5px;
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+        .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white; 
+    text-align: center;
+    text-decoration: none; 
+    font-size: 16px;
+    border-radius: 5px; 
+    font-weight: bold;
+}
+    
+.button-link:hover {
+    background-color: #45a049; 
+}
+
+    </style>
+    <script>
+        // JavaScript to toggle the dropdown menu
+        function toggleMenu() {
+            const menu = document.getElementById('dropdown-menu');
+            menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'block' : 'none';
+        }
+        
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            const menu = document.getElementById('dropdown-menu');
+            if (!event.target.matches('.menu-button') && !event.target.matches('.menu-button *')) {
+                menu.style.display = 'none';
+            }
+        }
+      
+    </script>
+</head>
+<body>
+    
+
+    <!-- Header -->
+    <header>
+        
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo">
+                <img src="logos.png" alt="Store Logo" style="height: 55px;"> 
+            </div>
+            <div class="location">
+                Delivering to <span>Mumbai 400001</span>
+                <a href="locaion.html">Update Location</a>
+            </div>
+            
+            <div class="search-bar">
+                <form method="GET" action="search.php">
+                    <select name="category">
+                        <option value="all">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="mobiles">Mobiles</option>
+                    </select>
+                    <input type="text" name="query" placeholder="Search..." required />
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            
+            
+            <div class="nav-links">
+                <a href="signup.php" class="button-link">Hello,Sign in</a>
+                <a href="return.php" class="button-link">Return & Orders</a>
+                <a href="cart.php" class="button-link">Cart</a>
+            </div>
+        </div>
+    
+
+        <div class="menu-row">
+            <div class="menu-button" onclick="toggleMenu()">&#9776; <!-- Hamburger icon --> Menu</div>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <a href="signup.php" class="button-link">Hello,Sign in</a>
+                <a href="Today-deal.php">Today's Deals</a>
+                <a href="mobiles.php">Mobiles</a>
+                <a href="fashion.php">Fashion</a>
+                <a href="electronics.php">Electronics</a>
+                <a href="kitchen.php">Home and Kitchen</a>
+                <a href="coutomers.html">Coutomer Service</a>
+                <a href="#">New Releases</a>
+                <a href="#">Computers</a>
+                <a href="settings.html" class="button-link">Settings</a>
+                <!-- Add more links as needed -->
+            </div>
+        
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+        
+   
+            <a href="Today-deal.php">Today's Deals</a>
+            <a href="mobiles.php">Mobiles</a>
+            <a href="fashion.php">Fashion</a>
+            <a href="electronics.php">Electronics</a>
+            <a href="kitchen.php">Home and Kitchen</a>
+            <a href="coutomers.html">Coutomer Service</a>
+            <a href="#">New Releases</a>
+            <a href="#">Computers</a>
+            
+            <!-- Add more links as needed -->
+        <!-- Product Display Section -->
+    
+        </div>
+    </header>
+    <iframe src="product.html" width="100%" height="700px" style="border:none;"></iframe>
+    
+    
+    
+
+               
+ 
+
+
+</body>
+</html>

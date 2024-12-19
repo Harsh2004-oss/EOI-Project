@@ -1,0 +1,352 @@
+/* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: #232f3e;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            margin-left: 20px;
+        }
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .nav-links {
+            margin-right: 20px;
+        }
+        .nav-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        /* Banner */
+        .banner {
+            background-image: url('banner1.jpg'); /* Replace with your banner image */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2em;
+            padding: 20px;
+        }
+        
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .category {
+            text-align: center;
+            width: 50px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        /* Featured Products */
+        .featured-products {
+            margin: 20px 0;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .product-card {
+            width: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-card h4 {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .product-card .price {
+            font-size: 1.1em;
+            color: #007bff;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .welcome-container {
+            text-align: center;
+            padding: 50px;
+            max-width: 800px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .logo {
+            font-size: 3em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .welcome-message {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f7f7;
+        }
+        
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        
+        .banner {
+            background-color: #e3f4f9;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .banner h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .banner p {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .banner button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .items div {
+            text-align: center;
+        }
+        
+        .items img {
+            width: 100%;
+            max-width: 100px;
+            border-radius: 8px;
+        }
+        
+        .items p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .card a {
+            display: block;
+            margin-top: 15px;
+            color: #0066c0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 16px;
+            width: 30%;
+            box-sizing: border-box;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin: 0 0 2px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;
+        }
+        .card a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 14px;
+        }
+        .card .image-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .image-grid img {
+            width: 48%;
+            border-radius: 4px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 16px;
+            width: 30%;
+            box-sizing: border-box;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;
+        }
+        .card a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 14px;
+        }
+        .card .image-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .image-grid img {
+            width: 48%;
+            border-radius: 4px;
+        }
+        

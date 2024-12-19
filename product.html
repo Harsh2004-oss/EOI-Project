@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Offers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 14px;
+            width: 250px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+            color: #333;
+        }
+        .card .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 8px 0;
+        }
+        .image-grid img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;
+        }
+        .image-caption {
+            font-size: 13px;
+            color: #555;
+        }
+        .card .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .card .btn:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Appliances for your home | Up to 55% off</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="homeappliance.jpeg" alt="Air Conditioners">
+                    <p class="image-caption">Air Conditioners</p>
+                </div>
+                <div>
+                    <img src="images.jpeg" alt="Refrigerators">
+                    <p class="image-caption">Refrigerators</p>
+                </div>
+                <div>
+                    <img src="micro.jpeg" alt="Microwaves">
+                    <p class="image-caption">Microwaves</p>
+                </div>
+                <div>
+                    <img src="wash.jpeg" alt="Washing Machines">
+                    <p class="image-caption">Washing Machines</p>
+                </div>
+            </div>
+            <a href="elproduct.php" class="btn">See More</a>
+
+        </div>
+        
+        <div class="card">
+            <h2>Revamp your home in style</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="cushion.jpeg" alt="Cushion Covers">
+                    <p class="image-caption">Cushion Covers</p>
+                </div>
+                <div>
+                    <img src="fogg.JPEG" alt="Figurines">
+                    <p class="image-caption">Figurines</p>
+                </div>
+                <div>
+                    <img src="cleaning.JPEG" alt="Home Storage">
+                    <p class="image-caption">Home Storage</p>
+                </div>
+                <div>
+                    <img src="download.jpeg" alt="Lighting Solutions">
+                    <p class="image-caption">Lighting Solutions</p>
+                </div>
+            </div>
+            <a href="homeproduct.php"class="btn">Explore All</a>
+        </div>
+        
+        <div class="card">
+            <h2>Starting ₹99 | Amazon Brands & more</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="homestorage.JPEG" alt="Home Storage">
+                    <p class="image-caption">Home Storage</p>
+                </div>
+                <div>
+                    <img src="toysandgames.JPEG" alt="Toys & Games">
+                    <p class="image-caption">Toys & Games</p>
+                </div>
+                <div>
+                    <img src="cloths.JPEG" alt="Clothing">
+                    <p class="image-caption">Clothing</p>
+                </div>
+            </div>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="card">
+            <h2>Starting ₹149 | Headphones</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="boat.JPEG" alt="Boat Headphones">
+                    <p class="image-caption">Boat Headphones</p>
+                </div>
+                <div>
+                    <img src="bolthead.JPEG" alt="Boult Headphones">
+                    <p class="image-caption">Boult Headphones</p>
+                </div>
+            </div>
+            <a href="#" class="btn">Browse</a>
+        </div>
+        
+        <div class="card">
+            <h2>Starting ₹199 | Brands & more</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="bedsheet.JPEG" alt="Bedsheets">
+                    <p class="image-caption">Bedsheets</p>
+                </div>
+                <div>
+                    <img src="curtain.JPEG" alt="Curtains">
+                    <p class="image-caption">Curtains</p>
+                </div>
+            </div>
+            <a href="#" class="btn">Explore</a>
+        </div>
+
+        <div class="card">
+            <h2>BrandsUp to 60% off </h2>
+            <div class="image-grid">
+                <div>
+                    <img src="Grooming.JPEG" alt="Grooming devices">
+                    <p class="image-caption">Grooming devices</p>
+                </div>
+                <div>
+                    <img src="personalcare.JPEG" alt=" personal care">
+                    <p class="image-caption">personal care</p>
+                </div>
+            </div>
+            
+            <a href="#" class="btn">Discover</a>
+        </div>
+        <div class="card">
+            <h2>Starting ₹99 | Start your fitness journey</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="rope.JPEG" alt="Cleaning Accessories">
+                    <p class="image-caption">Jumping Rope</p>
+                </div>
+                <div>
+                    <img src="watch.JPEG" alt="Tyre Care">
+                    <p class="image-caption">Fitness Watch</p>
+                </div>
+            </div>
+            
+            <a href="#" class="btn">Discover</a>
+        </div>
+        <div class="card">
+            <h2>Up to 75% off | Wall arts</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="painting.JPEG" alt="Cleaning Accessories">
+                    <p class="image-caption">Painting</p>
+                </div>
+                <div>
+                    <img src="decore.JPEG" alt="Tyre Care">
+                    <p class="image-caption">Decore</p>
+                </div>
+            </div>
+            
+            <a href="#" class="btn">Discover</a>
+        </div>
+        <div class="card">
+            <h2>Starting ₹99 | Video Games</h2>
+            <div class="image-grid">
+                <div>
+                    <img src="game.JPEG" alt="Cleaning Accessories">
+                    <p class="image-caption">Kids Toys</p>
+                </div>
+                <div>
+                    <img src="llgame.JPEG" alt="Tyre Care">
+                    <p class="image-caption">Lerning Toys</p>
+                </div>
+            </div>
+            
+            <a href="#" class="btn">Discover</a>
+        </div>
+        <div class="card">
+            <h2>Up to 60% off | jewellery accesories </h2>
+            <div class="image-grid">
+                <div>
+                    <img src="ear.JPEG" alt="Cleaning Accessories">
+                    <p class="image-caption">Earings</p>
+                </div>
+                <div>
+                    <img src="bang.JPEG" alt="Tyre Care">
+                    <p class="image-caption">Bangles</p>
+                </div>
+            </div>
+            
+            <a href="#" class="btn">Discover</a>
+        </div>
+    </div>
+</body>
+</html>

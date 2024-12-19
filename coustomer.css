@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background: #0b0b0b;
+    color: #fff;
+    padding: 15px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+header nav ul li a.active {
+    border-bottom: 2px solid #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Contact Methods */
+.contact-methods {
+    background: #ecf0f1;
+    padding: 40px 20px;
+}
+.contact-methods .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.contact-methods .method {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.contact-methods .method h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.contact-methods .method a {
+    color: #3498db;
+    text-decoration: none;
+}
+.contact-methods .method a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 40px 20px;
+    background: #fff;
+}
+.faq h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-container details {
+    margin-bottom: 20px;
+}
+.faq-container summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    color: #2c3e50;
+}
+.faq-container p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+</head>
+<style>
+    /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.settings-container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Sidebar Styling */
+.settings-sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.settings-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.settings-sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.settings-sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.settings-sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.settings-sidebar ul li .logout {
+    color: #ff0000;
+}
+
+.settings-sidebar ul li .button-link {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.settings-sidebar ul li .button-link:hover {
+    background-color: #0056b3;
+}
+
+/* Content Styling */
+.settings-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.settings-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+}
+
+section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form input[type="checkbox"] {
+    width: auto;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .settings-container {
+        flex-direction: column;
+    }
+
+    .settings-sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .settings-content {
+        margin-left: 0;
+    }
+}
+
+</style>
+<body>
+    <div class="settings-container">
+        <div class="settings-sidebar">
+            <ul>
+                <li><a href="#account-info">Account Information</a></li>
+                <li><a href="#payment-methods">Payment Methods</a></li>
+                <li><a href="#order-history">Order History</a></li>
+                <li><a href="#shipping-addresses">Shipping Addresses</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="logout.php" class="logout">Logout</a></li>
+                <li><a href="admin1.html" class="button-link">Admin-panel</a>
+            </ul>
+        </div>
+        
+        <div class="settings-content">
+            <h2>Settings</h2>
+            
+            <!-- Account Information -->
+            <section id="account-info">
+                <h3>Account Information</h3>
+                <form action="" method="post">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Payment Methods -->
+            <section id="payment-methods">
+                <h3>Payment Methods</h3>
+                <form action="" method="post">
+                    <label for="card-number">Credit Card Number</label>
+                    <input type="text" id="card-number" name="card-number">
+                    
+                    <button type="submit" class="save-btn">Add Payment Method</button>
+                </form>
+            </section>
+
+            <!-- Order History -->
+            <section id="order-history">
+                <h3>Order History</h3>
+                <p>No past orders to display.</p>
+            </section>
+
+            <!-- Shipping Addresses -->
+            <section id="shipping-addresses">
+                <h3>Shipping Addresses</h3>
+                <form action="" method="post">
+                    <label for="address">Shipping Address</label>
+                    <input type="text" id="address" name="address">
+                    
+                    <button type="submit" class="save-btn">Save Address</button>
+                </form>
+            </section>
+
+            <!-- Notifications -->
+            <section id="notifications">
+                <h3>Notification Settings</h3>
+                <label>
+                    <input type="checkbox" name="order-updates"> Order Updates
+                </label><br><br>
+                <label>
+                    <input type="checkbox" name="promotions"> Promotions
+                </label><br><br>
+                <button type="submit" class="save-btn">Save Preferences</button>
+            </section>
+
+             <script src="scripts.js"></script>
+</body>
+</html>
